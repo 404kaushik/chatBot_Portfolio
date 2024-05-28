@@ -109,8 +109,16 @@ nav{
     width: auto;
     padding: 10px;
     background-color: #005c4b;
-    border-radius: 15px 15px 0px;
+    border-radius: 15px 15px 0px;    
+    position: relative; /* Needed for positioning the dateLabel */
+    display: inline-block; /* Ensure it shrinks to fit content */
+    max-width: 80%; /* Prevents it from stretching too wide */  
 }
+
+.textDiv {
+    margin-bottom: 8px; /* Ensure there's space for the timestamp */
+}
+
 
 #sentlabel{
     color: #94bab3;
@@ -129,13 +137,13 @@ nav{
 
 
 .grey{
-    max-width: 45%;
+    max-width: 50%;
     margin: 5px;
     text-align: start;
     width: auto;
     padding: 10px;
     background-color: #202c33;
-    border-radius: 0px 15px 15px;
+    border-radius: 0px 15px 15px;    
 }
 
 .grey .mapview{
@@ -155,11 +163,16 @@ nav{
     border-radius: 10px;
 }
 
-.dateLabel{
+.dateLabel {
     color: #94bab3;
     display: block;
-    text-align: end;
+    text-align: right;
+    margin: top 15px;
     font-size: x-small;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    
 }
 
 
@@ -297,12 +310,6 @@ nav{
     border-radius: 10px;
 }
 
-
-
-
-
-
-
 footer{
     position: relative;
     left: 0;
@@ -342,6 +349,81 @@ footer{
     background-color: #2a3942;
     outline: none;
     border-color: transparent;
+}
+
+.audio-container {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #dcf8c6;
+    margin: 5px;    
+}
+
+.audio-container.left {
+    background-color: #202c33; /* Different background color for left messages */
+    max-width: 45%;
+}
+
+.audio-message {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+    flex-grow: 1;
+    padding-bottom: 10px; /* Add padding to make space for the date label */
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.play-button {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    fill: #FF0000;
+}
+
+.pause-button {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    fill: #FF0000;
+}
+
+.audio-bar-container {
+    width: 100%;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 2.5px;
+    overflow: hidden;
+    margin-top: 5px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+
+
+.audio-bar {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #34b7f1;
+    border-radius: 3px;    
+    position: relative;
+}
+
+.audio-duration {
+    width: 55%;
+    font-size: 14px;
+    color: #fff;
 }
 
 
