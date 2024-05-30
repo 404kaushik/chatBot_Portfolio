@@ -1,7 +1,7 @@
 var audio = new Audio('assets/sentmessage.mp3');
-var contactString = "<div class='social'> <a target='_blank' href='tel:+16478356393'> <div class='socialItem' id='call'><img class='socialItemI' src='images/phone.svg'/><label class='number'>9063675831</label></div> </a> <a href='mailto:patilvinu777@gmail.com'> <div class='socialItem'><img class='socialItemI' src='images/gmail.svg' alt=''></div> </a> <a target='_blank' href='https://github.com/404kaushik'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a> <a target='_blank' href='https://wa.me/+16478356393'> <div class='socialItem'><img class='socialItemI' src='images/whatsapp.svg' alt=''></div> </a> <a target='_blank' href='https://t.me/vinayak_09'> <div class='socialItem'><img class='socialItemI' src='images/telegram.svg' alt=''></div> </a> <a target='_blank' href='https://instagram.com/kaushiknag'> <div class='socialItem'><img class='socialItemI' src='images/instagram.svg' alt=''> </div> </a> <a href='https://www.linkedin.com/in/vinayak-patil-793bb5206/' target='_blank' rel='noopener noreferrer'> <div class='socialItem'><img class='socialItemI' src='images/linkedin.svg' alt=''></div> </a> </div>";
-var resumeString = "<img src='images/resumeThumbnail.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>Kaushik's Resume.pdf</label></div><a href='assets/Vinayak Patil&#39;s Resume.pdf' download='Vinayak_Patil_Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
-var addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/place/30+Champlain+Crescent,+Peterborough,+ON+K9L+1T1,+Canada/data=!4m2!3m1!1s0x89d58b589ffd44cf:0xbc1f0bfe7cb80101?sa=X&ved=1t:242&ictx=111' class='map'></iframe></div><label class='add'><address>30 Champlain Crescent<br>Unit 26<br>Peterborough, Ontario, Canada K9L1T1</address>";
+var contactString = "<div class='social'> <a target='_blank' href='tel:+16478356393'> <div class='socialItem' id='call'><img class='socialItemI' src='images/phone.svg'/><label class='number'>9063675831</label></div> </a> <a href='mailto:patilvinu777@gmail.com'> <div class='socialItem'><img class='socialItemI' src='images/gmail.svg' alt=''></div> </a> <a target='_blank' href='https://github.com/404kaushik'> <div class='socialItem'><img class='socialItemI' src='images/github.svg' alt=''></div> </a> <a target='_blank' href='https://wa.me/+16478356393'> <div class='socialItem'><img class='socialItemI' src='images/whatsapp.svg' alt=''></div> </a> <a target='_blank' href='https://t.me/ktumu123'> <div class='socialItem'><img class='socialItemI' src='images/telegram.svg' alt=''></div> </a> <a target='_blank' href='https://instagram.com/kaushiknag'> <div class='socialItem'><img class='socialItemI' src='images/instagram.svg' alt=''> </div> </a> <a href='https://www.linkedin.com/in/kaushik-tumu-b6103a153/' target='_blank' rel='noopener noreferrer'> <div class='socialItem'><img class='socialItemI' src='images/linkedin.svg' alt=''></div> </a> </div>";
+var resumeString = "<img src='images/resumeThumbnail.png' class='resumeThumbnail'><div class='downloadSpace'><div class='pdfname'><img src='images/pdf.png'><label>Kaushik's Resume.pdf</label></div><a href='assets/Kaushik Nag&#39;s Resume.pdf' download='Kaushik_Nag_Resume.pdf'><img class='download' src='images/downloadIcon.svg'></a></div>";
+var addressString = "<div class='mapview'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2853.1521018417557!2d-78.3058326!3d44.3479265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d58b589ffd44cf%3A0xbc1f0bfe7cb80101!2s30%20Champlain%20Crescent%2C%20Peterborough%2C%20ON%20K9L%201T1%2C%20Canada!5e0!3m2!1sen!2sin!4v1717093073804!5m2!1sen!2sin' class='map'></iframe></div><label class='add'><address>30 Champlain Crescent<br>Unit 26<br>Peterborough, Ontario, Canada K9L1T1</address>";
 
 // Adding an audio element
 var aboutAudio = new Audio('assets/aboutAudio.mp3');
@@ -191,7 +191,7 @@ function waitAndResponce(inputText) {
             sendTextMessage("<span class='sk'><br>I can comfortably write code in following languages :<br><span class='bold'>Java<br>C++<br>C<br>PHP<br>Kotlin<br>Dart<br>Python<br>CSS<br>HTML</span><br><br>I've experiance with following frameworks :<span class='bold'><br>Android<br>Flutter<br>ReactJs<br>GTK</span><br><br>I use <span class='bold'>Arch Linux</span> as daily driver on my HP Pavilion 15-ec0xxx<br>OS:Arch Linux<br>DE:Gnome(More often) Kde(often)<br>Favourite IDE:VSCode</span>");
             break;
         case "education":
-            sendTextMessage("<span class='sk'>I am currently in my 4th year of my BSc Honours degree in Computer Science with a specialization in Software Engineering.<br><br>I have completed my Secondary School from Indian Language School located in Lagos, Nigera<br>Passing Year:2021");
+            sendTextMessage("<span class='sk'>I am currently in my 4th year of my BSc Honours degree in Computer Science with a specialization in Software Engineering.<br>Passing Year: 2025<br><br>I have completed my Secondary School from Indian Language School located in Lagos, Nigera<br>Passing Year:2021");
             break;
         case "address":
             sendTextMessage(addressString);
@@ -219,7 +219,7 @@ function waitAndResponce(inputText) {
                     </p>
                     <br>
                     <p style="font-size: 16px; line-height: 1.5; ">
-                        👨‍💻 I have interned at start ups in different sectors like the travel 🧳 and fashion tech industry which has helped me truly expand my worldview. I am currently working as a Junior Stack Developer at HostelHop and I am open to new opportunities as I want to constantly grow.
+                        👨‍💻 I have interned at start ups in different sectors like the travel 🧳 and fashion 🛍️ tech industry which has helped me truly expand my worldview. I am currently working as a Junior Stack Developer at HostelHop and I am open to new opportunities as I want to constantly grow.
                     </p>
                     <br>
                     <p style="font-size: 16px; line-height: 1.5; ">
@@ -276,23 +276,16 @@ function sendProjectMessages() {
             title: "EasyFits Website",
             description: "A virtual wardrobe platform designed to help customers obtain accurate fitting measurements for their clothing. This project utilizes cutting-edge technologies to enhance user experience and provide precise fitting recommendations.",
             techStack: "Tech Stack: HTML, CSS, JavaScript, SCSS, Angular",
-            video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            // video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
             link: "https://easyfits.ca/"
         },
         {
             title: "HostelHop Website",
             description: "A hostel discovery application that connects solo travelers and backpackers with suitable accommodations. The platform offers a seamless search experience and comprehensive details about hostels worldwide.",
             techStack: "Tech Stack: React, TypeScript, Tailwind, Node.js, MongoDB, Python",
-            video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            // video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
             link: "https://hostelhop.net"
-        },
-        {
-            title: "Book Library Website",
-            description: "An online book library system that allows users to manage and browse a vast collection of books. The system features advanced search capabilities, user reviews, and a personalized bookshelf.",
-            techStack: "Tech Stack: HTML, CSS, JavaScript",
-            video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-            link: "https://example.com"
-        }
+        },        
     ];
 
     projects.forEach((project, index) => {
@@ -301,16 +294,12 @@ function sendProjectMessages() {
                 <div style="padding: 5px; border-radius: 10px; margin-bottom: 5px; max-width: 100%; box-sizing: border-box;">
                     <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">${project.title}</h3>
                     <p style="margin-bottom: 1em;">${project.description}</p>
-                    <p style="margin-bottom: 1em;"><strong>${project.techStack}</strong></p>
-                    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-bottom: 1em;">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src="${project.video}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <p style="margin-bottom: 1em;"><strong>${project.techStack}</strong></p>                    
                     <p>Click on this link to view the webpage: <a href="${project.link}" target="_blank" style="color: #007bff; text-decoration: none;">${project.link}</a></p>
                 </div>
             `);
         }, index * 2000); // 2 seconds interval between messages
     });
-    
 }
 
 
