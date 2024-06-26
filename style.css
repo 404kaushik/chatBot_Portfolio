@@ -111,7 +111,7 @@ nav{
     background-color: #005c4b;
     border-radius: 15px 15px 0px;    
     position: relative; /* Needed for positioning the dateLabel */
-    display: inline-block; /* Ensure it shrinks to fit content */
+    display: inline-block; /* Ensure it shrinks to fit content */    
     max-width: 80%; /* Prevents it from stretching too wide */  
 }
 
@@ -169,7 +169,7 @@ nav{
     display: block;
     text-align: right;
     margin: top 15px;
-    font-size: x-small;
+    font-size: 0.5rem;
     position: absolute;
     bottom: 5px;
     right: 10px;
