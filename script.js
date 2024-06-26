@@ -224,10 +224,10 @@ function waitAndResponce(inputText) {
             sendTextMessage(resumeString);
             break;
         case "skills":
-            sendTextMessage("<span class='sk'><br>I can comfortably write code in following languages :<br><span class='bold'>Java<br>C++<br>C<br>PHP<br>Kotlin<br>Dart<br>Python<br>CSS<br>HTML</span><br><br>I've experiance with following frameworks :<span class='bold'><br>Android<br>Flutter<br>ReactJs<br>GTK</span><br><br>I use <span class='bold'>Arch Linux</span> as daily driver on my HP Pavilion 15-ec0xxx<br>OS:Arch Linux<br>DE:Gnome(More often) Kde(often)<br>Favourite IDE:VSCode</span>");
+            sendTextMessage("<span class='sk'><br>I can comfortably write code in following languages:<br><span class='bold'>Java<br>C++<br>C<br>PHP<br>Kotlin<br>Dart<br>Python<br>CSS<br>HTML</span><br><br>I've experiance with following frameworks :<span class='bold'><br>Android<br>Flutter<br>ReactJs<br>GTK</span><br>");
             break;
         case "education":
-            sendTextMessage("<span class='sk'>I am currently in my 4th year of my BSc Honours degree in Computer Science with a specialization in Software Engineering.<br>Passing Year: 2025<br><br>I have completed my Secondary School from Indian Language School located in Lagos, Nigera<br>Passing Year:2021");
+            sendTextMessage("<span class='sk'>I am currently in my 4th year of my BSc Honours degree in Computer Science with a specialization in Software Engineering.<br>Overall GPA : 84.95% <br>Passing Year: 2025<br><br>I have completed my Secondary School from Indian Language School located in Lagos, Nigera<br>Overall GPA : 90.02% <br>Passing Year:2021");
             break;
         case "address":
             sendTextMessage(addressString);
