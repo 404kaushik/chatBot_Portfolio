@@ -19,9 +19,21 @@ function startFunction() {
 
 function setLastSeen() {
     var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'pm';
+    
+    // Convert hours from 24-hour to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    // Pad the minutes with leading zero if needed
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
     var lastSeen = document.getElementById("lastseen");
-    lastSeen.innerText = "last seen today at " + date.getHours() + ":" + date.getMinutes();
+    lastSeen.innerText = "last seen today at " + hours + ":" + minutes + " " + ampm;
 }
+
 
 function closeFullDP() {
     var x = document.getElementById("fullScreenDP");
@@ -54,20 +66,32 @@ function sendMsg() {
         return;
     }
     var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    
+    // Convert hours from 24-hour to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    // Pad the minutes with leading zero if needed
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
     var myLI = document.createElement("li");
     var myDiv = document.createElement("div");
     var greendiv = document.createElement("div");
     var textDiv = document.createElement("div");
     var dateLabel = document.createElement("div"); // Use div for better control
-    
-    dateLabel.innerText = date.getHours() + ":" + date.getMinutes();
+
+    // Set the formatted time with AM/PM
+    dateLabel.innerText = hours + ":" + minutes + " " + ampm;
     myDiv.setAttribute("class", "sent");
     greendiv.setAttribute("class", "green");
     dateLabel.setAttribute("class", "dateLabel");
     textDiv.setAttribute("class", "textDiv");
-    
+
     textDiv.innerText = input.value;
-    
+
     greendiv.appendChild(textDiv);
     greendiv.appendChild(dateLabel);  // Append dateLabel to greendiv after textDiv
     myDiv.appendChild(greendiv);      // Then append greendiv to myDiv
@@ -81,8 +105,20 @@ function sendMsg() {
 }
 
 
+
 function sendAudioMessage() {
     var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert hours from 24-hour to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    // Pad the minutes with leading zero if needed
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
     var myLI = document.createElement("li");
     var myDiv = document.createElement("div");
     var audioDiv = document.createElement("div");
@@ -90,7 +126,7 @@ function sendAudioMessage() {
     var audioBarContainer = document.createElement("div");
     var audioBar = document.createElement("div");
     var durationLabel = document.createElement("span");
-    var dateLabel = document.createElement("label");
+    var dateLabel = document.createElement("div"); // Use div for better control
     var profileImg = document.createElement("img");
     var audioContainer = document.createElement("div");
     var audioElement = new Audio('assets/aboutAudio.mp3'); // Path to your audio file
@@ -107,11 +143,11 @@ function sendAudioMessage() {
     audioBarContainer.setAttribute("class", "audio-bar-container");
     audioBar.setAttribute("class", "audio-bar");
     durationLabel.setAttribute("class", "audio-duration");
-    dateLabel.innerText = date.getHours() + ":" + date.getMinutes();    
+    dateLabel.innerText = hours + ":" + minutes + " " + ampm;
     profileImg.setAttribute("src", "images/kaushik.jpg"); // Path to your profile picture
     dateLabel.setAttribute("class", "dateLabel");
     profileImg.setAttribute("class", "profile-pic");
-    
+
     // Append elements
     audioBarContainer.appendChild(audioBar);
     audioDiv.appendChild(playButton);
@@ -129,12 +165,12 @@ function sendAudioMessage() {
 
     // Update the duration label when metadata is loaded
     audioElement.addEventListener('loadedmetadata', function() {
-        durationLabel.innerText = formatTime(audioElement.duration);
+        durationLabel.innerText = formatDuration(audioElement.duration);
     });
 
     // Update the duration label and progress bar in real-time as the audio plays
     audioElement.addEventListener('timeupdate', function() {
-        durationLabel.innerText = formatTime(audioElement.currentTime) + " / " + formatTime(audioElement.duration);
+        durationLabel.innerText = formatDuration(audioElement.currentTime) + " / " + formatDuration(audioElement.duration);
         var progress = (audioElement.currentTime / audioElement.duration) * 100;
         audioBar.style.width = progress + "%";
     });
@@ -159,11 +195,11 @@ function togglePlayPause(audioElement, playButton) {
     });
 }
 
-// Function to format time in minutes and seconds
-function formatTime(seconds) {
+// Function to format the duration in minutes and seconds
+function formatDuration(seconds) {
     var minutes = Math.floor(seconds / 60);
-    var seconds = Math.floor(seconds % 60);
-    return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+    var remainingSeconds = Math.floor(seconds % 60);
+    return minutes + ":" + (remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds);
 }
 
 
@@ -251,13 +287,25 @@ function clearChat() {
 function sendTextMessage(textToSend) {
     setTimeout(setLastSeen, 1000);
     var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+
+    // Convert hours from 24-hour to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+
+    // Pad the minutes with leading zero if needed
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
     var myLI = document.createElement("li");
     var myDiv = document.createElement("div");
     var greendiv = document.createElement("div");
-    var dateLabel = document.createElement("label");
+    var dateLabel = document.createElement("div"); // Use div for better control
+
     dateLabel.setAttribute("id", "sentlabel");
     dateLabel.id = "sentlabel";
-    dateLabel.innerText = date.getHours() + ":" + date.getMinutes();
+    dateLabel.innerText = hours + ":" + minutes + " " + ampm;
     myDiv.setAttribute("class", "received");
     greendiv.setAttribute("class", "grey");
     greendiv.innerHTML = textToSend;
@@ -291,10 +339,10 @@ function sendProjectMessages() {
     projects.forEach((project, index) => {
         setTimeout(() => {
             sendTextMessage(`
-                <div style="padding: 5px; border-radius: 10px; margin-bottom: 5px; max-width: 100%; box-sizing: border-box;">
-                    <h3 style="font-size: 1.2em; margin-bottom: 0.5em;">${project.title}</h3>
-                    <p style="margin-bottom: 1em;">${project.description}</p>
-                    <p style="margin-bottom: 1em;"><strong>${project.techStack}</strong></p>                    
+                <div >
+                    <h3>${project.title}</h3>
+                    <p >${project.description}</p>
+                    <p ><strong>${project.techStack}</strong></p>                    
                     <p>Click on this link to view the webpage: <a href="${project.link}" target="_blank" style="color: #007bff; text-decoration: none;">${project.link}</a></p>
                 </div>
             `);

@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 body{
@@ -125,6 +125,7 @@ nav{
     display: block;
     text-align: end;
     font-size: x-small;
+    
 }
 
 .recieved{
@@ -172,7 +173,6 @@ nav{
     position: absolute;
     bottom: 5px;
     right: 10px;
-    
 }
 
 
